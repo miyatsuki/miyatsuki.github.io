@@ -157,7 +157,9 @@ onload = function() {
     }, {passive: false})
 
     document.ontouchend = evt => {
-        if(Math.abs(touchMoveX) > Math.abs(touchMoveY)){
+        xDiff = Math.abs(touchStartX - touchMoveX)
+        yDiff = Math.abs(touchStartY - touchMoveY)
+        if(xDiff > yDiff){
             if(touchStartX > touchMoveX + 50){
                 moveRight()
             }else if(touchStartX - 50 < touchMoveX){
