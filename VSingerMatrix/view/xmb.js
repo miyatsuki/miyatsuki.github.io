@@ -7,10 +7,8 @@ onload = function() {
             videoId_map: videoId_map,
             singer_id: 0,
             song_id: 0,
-            pca_vec_all: [],
-            song_list: [],
-            user_song_list: [],
-            selected_video_id: ""
+            width: window.innerWidth,
+            height: window.innerHeight
         },
         methods: {
             getYAxisSong: function(){
@@ -172,5 +170,11 @@ onload = function() {
                 moveUp()
             }
         }
+    }
+
+    window.onresize = evt => {
+        app.width = window.innerWidth
+        app.height = window.innerHeight
+        console.log(app.width)
     }
 }
