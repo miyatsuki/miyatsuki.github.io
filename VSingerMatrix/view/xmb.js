@@ -172,6 +172,5 @@ onload = function() {
                 moveUp()
             }
         }
-        alert(xDiff + ":" +  yDiff)
     }
 }
