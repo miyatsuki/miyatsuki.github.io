@@ -160,17 +160,18 @@ onload = function() {
         xDiff = Math.abs(touchStartX - touchMoveX)
         yDiff = Math.abs(touchStartY - touchMoveY)
         if(xDiff > yDiff){
-            if(touchStartX > touchMoveX + 50){
+            if(touchStartX > touchMoveX + 25){
                 moveRight()
-            }else if(touchStartX - 50 < touchMoveX){
+            }else if(touchStartX - 25 < touchMoveX){
                 moveLeft()
             }
         }else{
-            if(touchStartY > touchMoveY + 50){
+            if(touchStartY > touchMoveY + 25){
                 moveDown()
-            }else if(touchStartY - 50 < touchMoveY){
+            }else if(touchStartY - 25 < touchMoveY){
                 moveUp()
             }
         }
+        alert(xDiff + ":" +  yDiff)
     }
 }
