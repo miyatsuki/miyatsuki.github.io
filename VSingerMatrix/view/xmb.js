@@ -144,15 +144,17 @@ onload = function() {
     }
 
     var touchStartX, touchStartY, touchMoveX, touchMoveY;
-    document.ontouchstart = evt => {
+    document.addEventListener('touchstart', function(evt){
+        event.preventDefault()
         touchStartX = evt.touches[0].pageX;
         touchStartY = evt.touches[0].pageY;
-    }
+    }, {passive: false})
 
-    document.ontouchmove = evt => {
+    document.addEventListener('touchmove', function(evt){
+        event.preventDefault()
         touchMoveX = evt.changedTouches[0].pageX
         touchMoveY = evt.changedTouches[0].pageY
-    }
+    }, {passive: false})
 
     document.ontouchend = evt => {
         if(Math.abs(touchMoveX) > Math.abs(touchMoveY)){
@@ -169,5 +171,4 @@ onload = function() {
             }
         }
     }
-
 }
