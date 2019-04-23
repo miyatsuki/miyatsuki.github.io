@@ -1,0 +1,35 @@
+.cp_chip {
+	display: inline-block;
+	height: 32px;
+	font-size: 13px;
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.6);
+	line-height: 32px;
+	padding: 0 12px;
+	border-radius: 16px;
+	background-color: #e4e4e4;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+.cp_chip:focus {
+	outline: none;
+	background-color: #26a69a;
+	color: #fff;
+}
+
+.cp_chip > img {
+	float: left;
+	margin: 0 8px 0 -12px;
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+}
+
+.cp_chip .close {
+	cursor: pointer;
+	float: right;
+	font-size: 16px;
+	line-height: 32px;
+	padding-left: 8px;
+}

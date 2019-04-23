@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+    </head>
+    <body>
+        <div class="row">
+            <!-- 動画が出てこない -->
+            <div class="col s4 video-container">
+                <iframe src="https://www.youtube.com/embed/M1RIUrgJqWw" frameborder="0"></iframe>
+            </div> 
+            <!-- video-containerを正しく使う場合 -->
+            <div class="col s4">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/M1RIUrgJqWw" frameborder="0"></iframe>
+                </div>
+            </div>
+            <!-- 自力でレスポンシブ対応する場合 -->
+            <div class="col s4">
+                <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%">
+                    <iframe src="https://www.youtube.com/embed/M1RIUrgJqWw" frameborder="0" 
+                    style="position:absolute; top:0; left: 0; width: 100%; height: 100%"></iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
